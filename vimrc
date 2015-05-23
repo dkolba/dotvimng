@@ -29,6 +29,14 @@ let g:airline_powerline_fonts = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FILETYPES 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Recognise file by extension
+autocmd BufEnter *.json set filetype=javascript
+autocmd BufEnter *.dust set filetype=html
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC. 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
