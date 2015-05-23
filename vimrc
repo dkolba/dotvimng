@@ -2,7 +2,7 @@
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 call pathogen#helptags()
 
 
@@ -16,6 +16,16 @@ let g:syntastic_style_warning_symbol = '≈≈'
 " Use eslint
 let g:syntastic_javascript_checkers = ['eslint']
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" AIRLINE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"get rid of the default mode indicator because we use airline
+set noshowmode
+"enable airline's smarter tab line extension
+let g:airline#extensions#tabline#enabled = 1
+"enable symbols of patched font
+let g:airline_powerline_fonts = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
