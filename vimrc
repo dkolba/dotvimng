@@ -7,6 +7,19 @@ call pathogen#helptags()
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" KEY MAPPINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Faster shortcut for commenting. Requires T-Comment plugin
+map ,c <c-_><c-_>
+let leader = ','
+let g:leader = ','
+let mapleader = ','
+let g:mapleader = ','
+let localleader = '\'
+let g:localleader = '\'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_error_symbol = '✗✗'
@@ -44,10 +57,24 @@ let g:snippets_dir="~/.vim/snippets"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" KEY MAPPINGS
+" EASYMOTION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Faster shortcut for commenting. Requires T-Comment plugin
-map ,c <c-_><c-_>
+" Require tpope/vim-repeat to enable dot repeat support
+" Jump to anywhere with only `s{char}{target}`
+" `s<CR>` repeat last find motion.
+nmap s <Plug>(easymotion-s)
+" Bidirectional & within line 't' motion
+omap t <Plug>(easymotion-bd-tl)
+" Use uppercase target labels and type as a lower case
+let g:EasyMotion_use_upper = 1
+ " type `l` and match `l`&`L`
+let g:EasyMotion_smartcase = 1
+" Smartsign (type `3` and match `3`&`#`)
+let g:EasyMotion_use_smartsign_us = 1
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+" keep cursor colum when JK motion
+let g:EasyMotion_startofline = 0 
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
