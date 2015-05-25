@@ -31,3 +31,6 @@
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion
+[submodule "bundle/distinguished"]
+	path = bundle/distinguished
+	url = https://github.com/Lokaltog/vim-distinguished
