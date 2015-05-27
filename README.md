@@ -1,0 +1,27 @@
+#Hat tip to Drew Neil (@nelstrom) at vimcasts.org
+
+Installation:
+
+    git clone git://github.com/dkolba/dotvimng.git ~/.vim
+
+
+Create symlink in home directory:
+
+    ln -s ~/.vim/vimrc ~/.vimrc
+
+
+Switch to ~/.vim directory and fetch submodules:
+
+    cd ~/.vim
+    git submodule init
+    git submodule update
+
+
+From now on, this updates all submodules:
+
+    git submodule foreach git pull origin master
+
+
+Install submodules like this:
+
+    git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
