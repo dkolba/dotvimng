@@ -156,7 +156,7 @@ set noshowmode
 let g:airline#extensions#tabline#enabled = 1
 
 "enable symbols of patched font
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -352,6 +352,16 @@ iab cocuoh couch
 iab cocuh couch
 iab cocch couch
 iab cocoh couch
+iab Cocouch Couch
+iab Coucch Couch
+iab Cocuch Couch
+iab Cococh Couch
+iab Cocuhc Couch
+iab Cocouh Couch
+iab Cocuoh Couch
+iab Cocuh Couch
+iab Cocch Couch
+iab Cocoh Couch
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
