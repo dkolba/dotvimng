@@ -144,6 +144,8 @@ let g:syntastic_style_warning_symbol = '≈≈'
 
 " Use eslint
 let g:syntastic_javascript_checkers = ['eslint']
+" Don't lint on :wq
+let g:syntastic_check_on_wq = 0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -237,7 +239,7 @@ endif
 syntax on
 
 " Color Scheme
-" set t_Co=256 (fix problem with red background color before uncommenting)
+set t_Co=256
 colorscheme distinguished
 
 "if match($TERM, "screen")!=-1
@@ -255,6 +257,7 @@ set number
 " Visual line marking 80 characters (vim 7.3)
 if v:version >= 703
   set colorcolumn=80
+  highlight ColorColumn ctermbg=darkred guibg=darkred
 endif
 
 " Display whitespace
