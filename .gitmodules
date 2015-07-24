@@ -34,3 +34,9 @@
 [submodule "bundle/distinguished"]
 	path = bundle/distinguished
 	url = https://github.com/Lokaltog/vim-distinguished
+[submodule "bundle/jsx"]
+	path = bundle/jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/tern"]
+	path = bundle/tern
+	url = https://github.com/marijnh/tern_for_vim.git

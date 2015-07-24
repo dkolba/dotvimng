@@ -465,3 +465,6 @@ set nofoldenable
 
 " Treat underscores as word seperators
 set iskeyword-=_
+
+" Activate JSX highlighting also in JSX files
+let g:jsx_ext_required = 0
