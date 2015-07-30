@@ -53,6 +53,9 @@ let g:mapleader = ','
 let localleader = '\'
 let g:localleader = '\'
 
+"Open Ctrl-P without typing ctrl + p :o)
+nnoremap <Leader>o :CtrlP<CR>
+
 " Saves time; maps the spacebar to colon
 nmap <space> :
 
@@ -74,10 +77,6 @@ nmap <silent> <leader>s :set spell!<CR>
 
 " In addition to <esc>, jj will exit to normal mode.
 inoremap jj <ESC>
-
-" maintain Visual Mode after shifting > and <
-vmap < <gv
-vmap > >gv
 
 "Map code completion to , + tab
 imap ,<tab> <C-x><C-o>
@@ -468,3 +467,15 @@ set iskeyword-=_
 
 " Activate JSX highlighting also in JSX files
 let g:jsx_ext_required = 0
+
+let g:ctrlp_use_caching = 0
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+else
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+  let g:ctrlp_prompt_mappings = {
+        \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
+        \ }
+endif
