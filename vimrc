@@ -422,9 +422,9 @@ endif
 set undodir=~/.vim/.vim-tmp//,/var/tmp//,/tmp//,.
 
 " Do not create swap files, we're using git after all
-set nobackup
-set nowritebackup
-set noswapfile
+" set nobackup
+" set nowritebackup
+" set noswapfile
 
 " Enable vim to remember undo chains between sessions (vim 7.3)
 if v:version >= 703
